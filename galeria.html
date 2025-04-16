@@ -23,108 +23,77 @@
       </nav>
     </div>
   </header>
+
   <main class="max-w-7xl mx-auto p-6">
     <h2 class="text-2xl font-semibold mb-6">Galería de Productos</h2>
     <hr>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-      <!-- Productos -->
-      <!-- Usa este bloque para cada producto cambiando los valores -->
-      <!-- Producto generado -->
-      <!-- Producto 1: Alas de pollo -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/alas-de-pollo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Alas de pollo">
         <p class="font-bold">Alas de pollo</p>
         <p class="mb-2">13,09 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Alas de pollo">
-          <input type="hidden" name="precio" value="13.09">
-          <input type="hidden" name="foto" value="Fotos/alas-de-pollo.jpg">
-          <label for="cantidad1" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad1" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad1" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad1" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Alas de pollo', 13.09, 'Fotos/alas-de-pollo.jpg', cantidad1.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
-      <!-- Producto 2: Jamón serrano -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/Jamon-serrano-gran-reserva.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Jamón serrano gran reserva">
         <p class="font-bold">Jamón serrano gran reserva</p>
         <p class="mb-2">15,20 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Jamón serrano gran reserva">
-          <input type="hidden" name="precio" value="15.20">
-          <input type="hidden" name="foto" value="Fotos/Jamon-serrano-gran-reserva.jpg">
-          <label for="cantidad2" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad2" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad2" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad2" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Jamón serrano gran reserva', 15.20, 'Fotos/Jamon-serrano-gran-reserva.jpg', cantidad2.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
-      <!-- Producto 3: Estofado de ternera -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/estofado-ternera.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Estofado de ternera">
         <p class="font-bold">Estofado de ternera</p>
         <p class="mb-2">10,55 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Estofado de ternera">
-          <input type="hidden" name="precio" value="10.55">
-          <input type="hidden" name="foto" value="Fotos/estofado-ternera.jpg">
-          <label for="cantidad3" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad3" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad3" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad3" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Estofado de ternera', 10.55, 'Fotos/estofado-ternera.jpg', cantidad3.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
-      <!-- Producto 4: Chuletas de pavo -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/Chuletas-de-pavo-al-ajillo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Chuletas de pavo al ajillo">
         <p class="font-bold">Chuletas de pavo al ajillo</p>
         <p class="mb-2">12,49 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Chuletas de pavo al ajillo">
-          <input type="hidden" name="precio" value="12.49">
-          <input type="hidden" name="foto" value="Fotos/Chuletas-de-pavo-al-ajillo.jpg">
-          <label for="cantidad4" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad4" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad4" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad4" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Chuletas de pavo al ajillo', 12.49, 'Fotos/Chuletas-de-pavo-al-ajillo.jpg', cantidad4.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
-      <!-- Producto 5: Pechuga de pavo -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/jampon-de-pavo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Pechuga de pavo cocido">
         <p class="font-bold">Pechuga de pavo cocido</p>
         <p class="mb-2">2,89 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Pechuga de pavo cocido">
-          <input type="hidden" name="precio" value="2.89">
-          <input type="hidden" name="foto" value="Fotos/jampon-de-pavo.jpg">
-          <label for="cantidad5" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad5" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad5" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad5" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Pechuga de pavo cocido', 2.89, 'Fotos/jampon-de-pavo.jpg', cantidad5.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
-      <!-- Producto 6: Carrilleras -->
+      <!-- PRODUCTO -->
       <div class="text-center border p-4 rounded shadow">
         <img src="Fotos/carrilleras-de-cerdo-en-olla-a-presion_0.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Carrilleras al vino tinto">
         <p class="font-bold">Carrilleras al vino tinto</p>
         <p class="mb-2">11,88 €</p>
-        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
-          <input type="hidden" name="producto" value="Carrilleras al vino tinto">
-          <input type="hidden" name="precio" value="11.88">
-          <input type="hidden" name="foto" value="Fotos/carrilleras-de-cerdo-en-olla-a-presion_0.jpg">
-          <label for="cantidad6" class="text-sm">Cantidad:</label>
-          <input type="number" name="cantidad" id="cantidad6" min="1" value="1" class="w-16 border p-1 text-center rounded">
-          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
-        </form>
+        <label for="cantidad6" class="text-sm">Cantidad:</label>
+        <input type="number" id="cantidad6" min="1" value="1" class="w-16 border p-1 text-center rounded mx-auto mb-2 block">
+        <button onclick="addToCart('Carrilleras al vino tinto', 11.88, 'Fotos/carrilleras-de-cerdo-en-olla-a-presion_0.jpg', cantidad6.value)" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
       </div>
 
     </div>
 
-    <!-- Carrito lateral -->
-    <div id="cart" style="right: -100%;" class="fixed top-0 w-80 h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+    <!-- CESTA LATERAL -->
+    <div id="cart" class="fixed top-0 right-[-100%] w-80 h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
       <div class="p-4 flex justify-between items-center border-b">
         <h2 class="text-lg font-bold">Tu Cesta</h2>
         <button id="closeCart" class="text-red-700 font-bold text-lg">✕</button>
@@ -132,7 +101,8 @@
       <div id="cartItems" class="p-4 space-y-4">
         <p class="text-center text-gray-500">Aquí aparecerán los productos añadidos.</p>
       </div>
-      <div class="p-4 border-t">
+      <div id="totalPrice" class="p-4 border-t">
+        <p class="font-bold text-center">Total: 0.00 €</p>
         <button onclick="clearCart()" class="bg-red-700 text-white w-full py-2 rounded mb-2">Vaciar Cesta</button>
         <a href="cesta.php" class="bg-gray-700 text-white w-full block text-center py-2 rounded">Ir a la Cesta</a>
       </div>
@@ -146,18 +116,73 @@
   </footer>
 
   <script>
-    document.getElementById('headerCartButton')?.addEventListener('click', () => {
-      document.getElementById('cart').style.right = '0';
-    });
+    const cartBtn = document.getElementById('headerCartButton');
+    const closeBtn = document.getElementById('closeCart');
+    const cartPanel = document.getElementById('cart');
+    const cartItemsContainer = document.getElementById('cartItems');
+    const totalPriceContainer = document.getElementById('totalPrice').getElementsByTagName('p')[0];
 
-    document.getElementById('closeCart')?.addEventListener('click', () => {
-      document.getElementById('cart').style.right = '-100%';
-    });
+    // Asegurarnos de que la cesta esté inicialmente oculta
+    cartPanel.style.right = '-100%';
+
+    const openCart = () => cartPanel.style.right = '0';
+    const closeCartPanel = () => cartPanel.style.right = '-100%';
+
+    cartBtn?.addEventListener('click', openCart);
+    closeBtn?.addEventListener('click', closeCartPanel);
+
+    function addToCart(nombre, precio, foto, cantidad) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const index = cart.findIndex(item => item.nombre === nombre);
+      if (index > -1) {
+        cart[index].cantidad += parseInt(cantidad);
+      } else {
+        cart.push({ nombre, precio, foto, cantidad: parseInt(cantidad) });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+      openCart();
+    }
 
     function clearCart() {
-      fetch('cesta.php?vaciar=true')
-        .then(() => location.reload());
+      localStorage.removeItem('cart');
+      renderCart();
     }
+
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `<p class="text-center text-gray-500">Aquí aparecerán los productos añadidos.</p>`;
+        totalPriceContainer.textContent = `Total: 0.00 €`;
+        return;
+      }
+
+      let totalPrice = 0;
+      cartItemsContainer.innerHTML = '';
+      cart.forEach(item => {
+        const totalProductPrice = item.precio * item.cantidad;
+        totalPrice += totalProductPrice;
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'flex items-center space-x-4';
+        itemDiv.innerHTML = `
+          <img src="${item.foto}" class="w-16 h-16 object-cover rounded" alt="${item.nombre}">
+          <div>
+            <p class="font-bold">${item.nombre}</p>
+            <p>${item.cantidad} x ${item.precio.toFixed(2)} €</p>
+            <p class="text-sm text-gray-500">Total Producto: ${totalProductPrice.toFixed(2)} €</p>
+          </div>
+        `;
+        cartItemsContainer.appendChild(itemDiv);
+      });
+
+      totalPriceContainer.textContent = `Total: ${totalPrice.toFixed(2)} €`;
+    }
+
+    renderCart();
+
   </script>
+  
 </body>
 </html>
