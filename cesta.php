@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 if (isset($_GET['vaciar'])) {
     session_unset();
+    header("Location: cesta.php");
     exit();
 }
 ?>
@@ -122,17 +123,37 @@ if (isset($_GET['vaciar'])) {
         <button id="closeCart" class="close-cart">X</button>
     </div>
     <div id="cartItems" class="cart-items">
-        <!-- Los productos añadidos se mostrarán aquí -->
+      <?php
+      if (isset($_SESSION['cesta']) && count($_SESSION['cesta']) > 0) {
+          foreach ($_SESSION['cesta'] as $nombre => $producto) {
+              echo '<div class="cart-item">';
+              echo '<img src="' . htmlspecialchars($producto['foto']) . '" alt="' . htmlspecialchars($nombre) . '" class="cart-item-image">';
+              echo '<div class="cart-item-info">';
+              echo '<p><strong>' . htmlspecialchars($nombre) . '</strong></p>';
+              echo '<p>' . $producto['cantidad'] . ' x ' . number_format($producto['precio'], 2) . ' €</p>';
+              echo '<p><strong>' . number_format($producto['total'], 2) . ' €</strong></p>';
+              echo '</div></div>';
+          }
+      } else {
+          echo '<p class="text-center text-gray-500">Tu cesta está vacía</p>';
+      }
+      ?>
     </div>
     <div class="cart-footer">
-        <button onclick="clearCart()">Vaciar Cesta</button>
-        <button onclick="window.location.href='checkout.php'">Finalizar Compra</button>
+        <button onclick="window.location.href='cesta.php?vaciar=true'">Vaciar Cesta</button>
+        <?php
+        $total = 0;
+        if (isset($_SESSION['cesta'])) {
+            foreach ($_SESSION['cesta'] as $producto) {
+                $total += $producto['total'];
+            }
+        }
+        ?>
+        <button onclick="window.location.href='checkout.php'">Finalizar Compra - <?= number_format($total, 2) ?> €</button>
     </div>
 </div>
 
 <script>
-let cart = [];
-
 document.getElementById('openCart').addEventListener('click', () => {
     document.getElementById('cart').style.right = '0';
 });
@@ -140,44 +161,7 @@ document.getElementById('openCart').addEventListener('click', () => {
 document.getElementById('closeCart').addEventListener('click', () => {
     document.getElementById('cart').style.right = '-400px';
 });
-
-function addToCart(nombre, precio, cantidad, foto) {
-    const existente = cart.find(p => p.nombre === nombre);
-    if (existente) {
-        existente.cantidad += cantidad;
-    } else {
-        cart.push({ nombre, precio, cantidad, foto });
-    }
-    actualizarCarrito();
-}
-
-function actualizarCarrito() {
-    const contenedor = document.getElementById('cartItems');
-    contenedor.innerHTML = '';
-    let total = 0;
-
-    cart.forEach(producto => {
-        const item = document.createElement('div');
-        item.classList.add('cart-item');
-        item.innerHTML = `
-            <img src="${producto.foto}" alt="${producto.nombre}" class="cart-item-image">
-            <div class="cart-item-info">
-                <p><strong>${producto.nombre}</strong></p>
-                <p>${producto.cantidad} x ${producto.precio.toFixed(2)} €</p>
-                <p><strong>${(producto.cantidad * producto.precio).toFixed(2)} €</strong></p>
-            </div>
-        `;
-        contenedor.appendChild(item);
-        total += producto.cantidad * producto.precio;
-    });
-
-    document.querySelector('.cart-footer button:nth-child(2)').innerText = `Finalizar Compra - ${total.toFixed(2)} €`;
-}
-
-function clearCart() {
-    cart = [];
-    actualizarCarrito();
-}
 </script>
+
 </body>
 </html>
