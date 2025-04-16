@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Carnicería Navarra</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white text-red-700 font-sans">
+  <header class="bg-red-700 text-white p-6 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="carniceriaNavarra.html"><img src="fotos/logo.jpg" width="50" alt="Logo"></a>
+        <a href="carniceriaNavarra.html"><h1 class="text-3xl font-bold">Carnicería Navarra</h1></a>
+      </div>
+      <nav class="space-x-4">
+        <a href="carniceriaNavarra.html" class="hover:underline">Inicio</a>
+        <a href="galeria.html" class="hover:underline">Productos</a>
+        <a href="contacto.php" class="hover:underline">Contacto</a>
+        <a href="login.php" class="hover:underline">Login</a>
+        <button id="headerCartButton" class="bg-white text-red-700 px-4 py-2 rounded hover:bg-gray-200">🛒 Ver Cesta</button>
+      </nav>
+    </div>
+  </header>
+
+  <br><br>
+  <main>
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">¡Bienvenido a Carnicería Navarra!</h2>
+      <p class="text-lg">Tu carnicería de confianza con los mejores cortes de carne, frescura garantizada y atención personalizada.</p>
+    </section>
+
+    <section class="relative">
+      <img src="fotos/Carniceria-LASTERRA-jpg.webp" alt="Carnicería Navarra" width="5000" height="1500">
+      <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
+        <h2 class="text-white text-4xl font-bold mb-2">LA CARNE CON MAS CALIDAD</h2>
+        <p class="text-white text-lg mb-4">Cerca de ti</p>
+        <button class="bg-red-700 text-white py-2 px-4 rounded"><a href="galeria.html">Saber Más</a></button><br>
+        <button class="bg-red-700 text-white py-2 px-4 rounded"><a href="#tienda">Tienda Online</a></button>
+      </div>
+    </section>
+  </main>
+
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <hr> <br>
+    <h2 class="text-4xl font-bold mb-4 text-center">Los más vendidos</h2><br>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="p-6 border rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="fotos/costillar.jpg" class="mx-auto mb-4" alt="Calidad">
+        <h3 class="text-xl font-semibold mb-2">Costillar de cerdo</h3>
+        <p>Cortes frescos seleccionados para garantizar sabor y seguridad alimentaria.</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="fotos/chistorra.jpg" class="mx-auto mb-4" alt="Atención personalizada">
+        <h3 class="text-xl font-semibold mb-2">Chistorra de Navarra</h3>
+        <p>Nos adaptamos a tus necesidades. ¡Consultá nuestros productos especiales!</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="fotos/pollo-entero.jpg" class="mx-auto mb-4" alt="Tradición">
+        <h3 class="text-xl font-semibold mb-2">Pollo de corral</h3>
+        <p>Décadas ofreciendo carnes de calidad y atención cercana en Navarra.</p>
+      </div>
+    </section>
+    <br><hr>
+  </main>
+
+  <footer class="bg-red-700 text-white p-4 mt-10">
+    <div class="max-w-7xl mx-auto text-center items-center"><br>
+      <div class="max-w-7xl mx-auto text-center flex justify-center items-center">
+        <img src="fotos/logo.jpg" width="100" alt="Logo">
+        <div class="p-6 max-w-sm mx-auto">
+          <h1 class="text-xl font-bold mb-2">CARNICERÍA</h1>
+          <hr class="border-white mb-4"/>
+          <p class="mb-4 text-left">
+            Carne fresca Online y productos Gourmet. Compra de calidad directa a casa entre 2 y 6 días hábiles.
+          </p>
+          <div class="mb-4">
+            <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Martín Azpilicueta 20. Pamplona, Navarra.</p>
+            <p class="flex items-center mb-2"><i class="fas fa-phone-alt mr-2"></i>Tel: +34 948 25 45 95</p>
+            <p class="flex items-center"><i class="fas fa-envelope mr-2"></i>E-mail: info@irurecarniceria.com</p>
+          </div>
+          <div class="flex space-x-2">
+            <img alt="Visa" class="h-6" src="https://storage.googleapis.com/a1aa/image/PelNWNOz8yPR-2ZNJ9f2eXDw_zA5ShC0WNw6pU28nrY.jpg" width="40"/>
+            <img alt="MasterCard" class="h-6" src="https://storage.googleapis.com/a1aa/image/9a2LUuNYVXeLewhefL7x1-Et8r2TjP8ijLW6uNUpY7w.jpg" width="40"/>
+            <img alt="PayPal" class="h-6" src="https://storage.googleapis.com/a1aa/image/eXfQYZdrsJacsJpd9XFQn0cjqZ28UlqV0VQ299VzcPE.jpg" width="40"/>
+            <img alt="American Express" class="h-6" src="https://storage.googleapis.com/a1aa/image/EcglChDL3SR-BHEvUp5113xh-pPNxaPm9_JKPJDow6A.jpg" width="40"/>
+            <img alt="Visa Electron" class="h-6" src="https://storage.googleapis.com/a1aa/image/q8BhF2iMAm9QQxRUVdF-mYL9DhqcGaSYYjrqjJ2PQqM.jpg" width="40"/>
+            <img alt="Maestro" class="h-6" src="https://storage.googleapis.com/a1aa/image/qKoSUDnxw8BqJeh3BU6txC8KQe53lf9dP7fNXQXbFH4.jpg" width="40"/>
+          </div>
+        </div>
+      </div><br>
+      <hr><br>
+      <p>&copy; 2025 Carnicería Navarra. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- PANEL LATERAL DE CESTA -->
+  <div id="cart" class="fixed top-0 -right-full w-80 h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+    <div class="p-4 flex justify-between items-center border-b">
+      <h2 class="text-lg font-bold">Tu Cesta</h2>
+      <button id="closeCart" class="text-red-700 font-bold text-lg">✕</button>
+    </div>
+    <div id="cartItems" class="p-4 space-y-4">
+      <p class="text-center text-gray-500">Aquí aparecerán los productos añadidos.</p>
+    </div>
+    <div class="p-4 border-t">
+      <button onclick="clearCart()" class="bg-red-700 text-white w-full py-2 rounded mb-2">Vaciar Cesta</button>
+      <a href="cesta.php" class="bg-gray-700 text-white w-full block text-center py-2 rounded">Ir a la Cesta</a>
+    </div>
+  </div>
+
+  <!-- JS para abrir/cerrar el panel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = document.getElementById('cart');
+      const openBtn = document.getElementById('headerCartButton');
+      const closeBtn = document.getElementById('closeCart');
+
+      cart.classList.remove('right-0');
+      cart.classList.add('-right-full');
+
+      openBtn?.addEventListener('click', (event) => {
+        event.preventDefault();
+        cart.classList.remove('-right-full');
+        cart.classList.add('right-0');
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        cart.classList.remove('right-0');
+        cart.classList.add('-right-full');
+      });
+    });
+
+    function clearCart() {
+      fetch('cesta.php?vaciar=true')
+        .then(() => location.reload());
+    }
+  </script>
+</body>
+</html>

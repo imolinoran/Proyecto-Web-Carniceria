@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería | Carnicería Navarra</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white text-red-700 font-sans">
+  <header class="bg-red-700 text-white p-6 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="carniceriaNavarra.html"><img src="fotos/logo.jpg" width="50" alt="Logo"></a>
+        <a href="carniceriaNavarra.html"><h1 class="text-3xl font-bold">Carnicería Navarra</h1></a>
+      </div>
+      <nav class="space-x-4">
+        <a href="carniceriaNavarra.html" class="hover:underline">Inicio</a>
+        <a href="galeria.html" class="hover:underline">Productos</a>
+        <a href="contacto.php" class="hover:underline">Contacto</a>
+        <a href="login.php" class="hover:underline">Login</a>
+        <button id="headerCartButton" class="bg-white text-red-700 px-4 py-2 rounded hover:bg-gray-200">🛒 Ver Cesta</button>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-6">Galería de Productos</h2>
+    <hr>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Productos -->
+      <!-- Usa este bloque para cada producto cambiando los valores -->
+      <!-- Producto generado -->
+      <!-- Producto 1: Alas de pollo -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/alas-de-pollo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Alas de pollo">
+        <p class="font-bold">Alas de pollo</p>
+        <p class="mb-2">13,09 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Alas de pollo">
+          <input type="hidden" name="precio" value="13.09">
+          <input type="hidden" name="foto" value="Fotos/alas-de-pollo.jpg">
+          <label for="cantidad1" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad1" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+      <!-- Producto 2: Jamón serrano -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/Jamon-serrano-gran-reserva.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Jamón serrano gran reserva">
+        <p class="font-bold">Jamón serrano gran reserva</p>
+        <p class="mb-2">15,20 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Jamón serrano gran reserva">
+          <input type="hidden" name="precio" value="15.20">
+          <input type="hidden" name="foto" value="Fotos/Jamon-serrano-gran-reserva.jpg">
+          <label for="cantidad2" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad2" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+      <!-- Producto 3: Estofado de ternera -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/estofado-ternera.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Estofado de ternera">
+        <p class="font-bold">Estofado de ternera</p>
+        <p class="mb-2">10,55 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Estofado de ternera">
+          <input type="hidden" name="precio" value="10.55">
+          <input type="hidden" name="foto" value="Fotos/estofado-ternera.jpg">
+          <label for="cantidad3" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad3" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+      <!-- Producto 4: Chuletas de pavo -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/Chuletas-de-pavo-al-ajillo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Chuletas de pavo al ajillo">
+        <p class="font-bold">Chuletas de pavo al ajillo</p>
+        <p class="mb-2">12,49 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Chuletas de pavo al ajillo">
+          <input type="hidden" name="precio" value="12.49">
+          <input type="hidden" name="foto" value="Fotos/Chuletas-de-pavo-al-ajillo.jpg">
+          <label for="cantidad4" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad4" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+      <!-- Producto 5: Pechuga de pavo -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/jampon-de-pavo.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Pechuga de pavo cocido">
+        <p class="font-bold">Pechuga de pavo cocido</p>
+        <p class="mb-2">2,89 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Pechuga de pavo cocido">
+          <input type="hidden" name="precio" value="2.89">
+          <input type="hidden" name="foto" value="Fotos/jampon-de-pavo.jpg">
+          <label for="cantidad5" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad5" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+      <!-- Producto 6: Carrilleras -->
+      <div class="text-center border p-4 rounded shadow">
+        <img src="Fotos/carrilleras-de-cerdo-en-olla-a-presion_0.jpg" class="rounded-lg shadow-md mx-auto mb-2" alt="Carrilleras al vino tinto">
+        <p class="font-bold">Carrilleras al vino tinto</p>
+        <p class="mb-2">11,88 €</p>
+        <form action="cesta.php" method="POST" class="flex flex-col items-center space-y-2">
+          <input type="hidden" name="producto" value="Carrilleras al vino tinto">
+          <input type="hidden" name="precio" value="11.88">
+          <input type="hidden" name="foto" value="Fotos/carrilleras-de-cerdo-en-olla-a-presion_0.jpg">
+          <label for="cantidad6" class="text-sm">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad6" min="1" value="1" class="w-16 border p-1 text-center rounded">
+          <button type="submit" class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-800">Añadir a la cesta</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Carrito lateral -->
+    <div id="cart" style="right: -100%;" class="fixed top-0 w-80 h-full bg-white shadow-lg z-50 transition-all duration-300 overflow-y-auto">
+      <div class="p-4 flex justify-between items-center border-b">
+        <h2 class="text-lg font-bold">Tu Cesta</h2>
+        <button id="closeCart" class="text-red-700 font-bold text-lg">✕</button>
+      </div>
+      <div id="cartItems" class="p-4 space-y-4">
+        <p class="text-center text-gray-500">Aquí aparecerán los productos añadidos.</p>
+      </div>
+      <div class="p-4 border-t">
+        <button onclick="clearCart()" class="bg-red-700 text-white w-full py-2 rounded mb-2">Vaciar Cesta</button>
+        <a href="cesta.php" class="bg-gray-700 text-white w-full block text-center py-2 rounded">Ir a la Cesta</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-red-700 text-white p-4 mt-10">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2025 Carnicería Navarra. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('headerCartButton')?.addEventListener('click', () => {
+      document.getElementById('cart').style.right = '0';
+    });
+
+    document.getElementById('closeCart')?.addEventListener('click', () => {
+      document.getElementById('cart').style.right = '-100%';
+    });
+
+    function clearCart() {
+      fetch('cesta.php?vaciar=true')
+        .then(() => location.reload());
+    }
+  </script>
+</body>
+</html>
